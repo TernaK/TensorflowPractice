@@ -2,7 +2,7 @@
 This is a simple neural net with two layers.
 The hidden layer uses 1024 neurons.
 
-It is used for digita classification using the MNIST dataset
+It is used for digits classification using the MNIST dataset
 ACCURACY: ~91%
 """
 import tensorflow as tf
