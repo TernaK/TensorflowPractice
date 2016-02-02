@@ -3,7 +3,7 @@
 This is a conv net model with several conv layers and max poooling layers.
 It also uses dropout.
 
-It is used for digita classification using the MNIST dataset
+It is used for digit classification using the MNIST dataset
 ACCURACY: > 95% (was killing my CPU didnt finish training)
 """
 import tensorflow as tf
