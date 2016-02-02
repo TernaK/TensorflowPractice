@@ -2,7 +2,7 @@
 This is a simple neural net with two layers.
 The hidden layer uses 1024 neurons.
 
-It is used for digits classification using the MNIST dataset
+It is used for digit classification using the MNIST dataset
 ACCURACY: ~91%
 """
 import tensorflow as tf
@@ -12,14 +12,21 @@ from tensorflow.examples.tutorials.mnist import input_data
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 
 x = tf.placeholder(tf.float32, [None, 784])
+
 W = tf.Variable(tf.zeros([784, 10]))
 b = tf.Variable(tf.zeros([10]))
+
 y = tf.nn.softmax(tf.matmul(x, W) + b)
 y_ = tf.placeholder(tf.float32, [None, 10])
+
 cross_entropy = -tf.reduce_sum(y_ * tf.log(y))
+
 train_step = tf.train.GradientDescentOptimizer(0.01).minimize(cross_entropy)
+
 init = tf.initialize_all_variables()
+
 sess = tf.Session()
+
 sess.run(init)
 for i in range(100):
 	batch_xs, batch_ys = mnist.train.next_batch(100)
