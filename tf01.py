@@ -1,5 +1,5 @@
 """
-This is a 1 layer neural network trained using Tensorflow.
+This is a 2 layer neural network trained using Tensorflow.
 It closely follows the Tensorflow beginner tutorials.
 
 It was used for digit classification using the MNIST dataset
