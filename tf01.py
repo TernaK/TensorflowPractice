@@ -32,6 +32,7 @@ train_step = tf.train.GradientDescentOptimizer(0.01).minimize(cross_entropy)
 init = tf.initialize_all_variables()
 
 sess = tf.Session()
+
 sess.run(init)
 
 #train for multiple epochs
